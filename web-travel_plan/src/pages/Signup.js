@@ -57,12 +57,17 @@ class Signup extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <div className={styles.formGroup}>
                             <label className={styles.span}>이메일</label>
-                            <input 
-                                type="email"
-                                value={this.state.email}
-                                onChange={this.saveEmail}
-                                className={styles.inputField}
-                            />
+                            <div className={styles.inputWithButton}>
+                                <input 
+                                    type="email"
+                                    value={this.state.email}
+                                    onChange={this.saveEmail}
+                                    className={styles.inputField}
+                                />
+                            </div>
+                            <button type="button" className={styles.button}>
+                                <div className={styles.text2}>인증번호 전송</div>
+                            </button>
                         </div>
                         <div className={styles.formGroup}>
                             <label className={styles.span}>인증번호 확인</label>
