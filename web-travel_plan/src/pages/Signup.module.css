@@ -1,0 +1,178 @@
+.main {
+    width: 1480px;
+    height: 900px;
+    flex-grow: 0;
+    background-color: #fff;
+    display: flex;
+  }
+  .mini_logo {
+    width: 70px;
+    height: 70px;
+    mix-blend-mode: hard-light;
+    position: fixed;
+    top: 5px;
+    left: 100;
+  }
+
+  .mini_service_name {
+    width: 91px;
+    height: 42px;
+    margin: 50px 182px 72px 67px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #365486;
+    position: fixed;
+    top: 0;
+    left: 48;
+  }
+
+  .Rectangle1 {
+    width: 440px;
+    height: 700px;
+    opacity: 0.8;
+    border-radius: 25px;
+    margin: auto auto;
+    background-color: rgba(220, 242, 241, 0.9);
+  }
+
+  .join_text {
+    width: 247px;
+    height: 37px;
+    margin: 30px auto 5px auto;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.25px;
+    text-align: center;
+    color: #0f1035;
+  }
+
+  .text {
+    width: 314px;
+    height: 23px;
+    margin: 10px auto 20px auto;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.16px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .formGroup {
+    width: 100%;
+    margin-bottom: 30px ;
+  }
+
+  .span {
+    display: block;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.4);
+    margin: 50px 0 10px 55px;
+  }
+
+  .inputField {
+    width: 334px;
+    height: 37px;
+    padding: 0 15px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    font-family: Inter;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .button {
+    width: 85px;
+    height: 28px;
+    padding: 6px 3px 5px 2px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(127, 199, 217, 0.8);
+  }
+  .button:hover,
+  .button2:hover {
+    background-color: rgba(127,199,217, 0.4)
+  }
+
+  .text2 {
+    width: 80px;
+    height: 17px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.1px;
+    text-align: center;
+    color: #0f1035;
+  }
+
+  .button2 {
+    width: 223px;
+    height: 48px;
+    margin: 40px 10px auto 110px;
+    padding: 8px 60px 0 58px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(127, 199, 217, 0.8);
+  }
+
+ .text3 {
+    width: 105px;
+    height: 31px;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.15px;
+    text-align: center;
+    color: #0f1035;
+  }
+
+
+  /* .span {
+    width: 334px;
+    height: 20px;
+    margin: 50px 0 10px 55px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.12px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .Rectangle2 {
+    width: 334px;
+    height: 37px;
+    margin: 5px auto 20px auto;
+    padding: 4px 15px 8px 245px;
+    border-radius: 8px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    border: none;
+  } */

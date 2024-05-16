@@ -1,0 +1,33 @@
+.main {
+    width: 1480px;
+    height: 900px;
+    flex-grow: 0;
+    background-color: #fff;
+    display: flex;
+  }
+  .mini_logo {
+    width: 70px;
+    height: 70px;
+    mix-blend-mode: hard-light;
+    position: fixed;
+    top: 5px;
+    left: 100;
+  }
+
+  .mini_service_name {
+    width: 91px;
+    height: 42px;
+    margin: 50px 182px 72px 67px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #365486;
+    position: fixed;
+    top: 0;
+    left: 48;
+  }

@@ -1,0 +1,43 @@
+src/
+│
+├── components/        : 각각의 기능을 담당하는 컴포넌트들 위치, 
+│   ├── Auth/
+│   │   ├── Login.js
+│   │   ├── Signup.js
+│   │   └── Logout.js
+│   │
+│   ├── Button /
+│   │   ├── InquiryForm.js
+|   |   ├── Logo.js
+|   |   ├── InterestButton.js
+|   |   ├── StartButton.js
+|   |   └── MyTravelButton.js
+│   │
+│   ├── MyInterests/
+│   │   ├── InterestList.js
+│   │   └── RecommendPlace.js
+│   │
+│   ├── MyTrips/
+│   │   ├── MyTripsList.js
+│   │   └── TripDetail.js
+│   │
+│   └── StartTrip/
+│       ├── CityList.js
+│       ├── DateSelector.js
+│       └── PlanPreview.js
+│
+├── pages/       : 라우팅되는 각 페이지에 대한 컴포넌트들이 위치함, 이 컴포넌트들은 라우터에서 사용됨, 각 페이지에는 해당 기능을 다루는 컴포넌트가 포함됨
+│   ├── Home.js
+│   ├── Login.js
+│   ├── Signup.js
+│   ├── MyTrips.js
+│   ├── StartTrip.js
+│   └── TripDetail.js
+│
+├── utils/
+│   ├── Firebase.js
+│   └── Calendar.js
+│
+├── App.css   : 전역적으로 사용되는 CSS스타일 정의
+├── App.js    : 라우팅 및 전역 상태 관리 등 애플리케이션의 주요 기능 구현됨
+└── index.js   : react 애플리케이션을 렌더링하는 진입점

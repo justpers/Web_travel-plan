@@ -1,5 +1,4 @@
 import { initializeApp } from "@firebase/app";
-// firestore를 불러오는 모듈을 임포트
 import { getFirestore } from "@firebase/firestore"
 
 const firebaseConfig = {
