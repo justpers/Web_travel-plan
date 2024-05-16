@@ -77,7 +77,7 @@ class Home extends React.Component {
               </div>
 
               <button type="submit" className={styles.Rectangle4}>
-                <div className={styles.text}>로그인</div>
+                <div className={styles.text}><Link to="/login">로그인</Link></div>
               </button>
 
               <div className={styles.join}>
