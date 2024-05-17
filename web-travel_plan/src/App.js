@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Signup2 from './pages/Signup2'
+import Myinterest from './pages/Myinterest';
+import StartTrip from './pages/StartTrip';
+import MyTravel from './pages/MyTravel';
 
 // // firebase.js에서 db를 import
 // import { db } from './utils/Firebase';
@@ -14,6 +17,7 @@ import Signup2 from './pages/Signup2'
 // import { doc, getDoc } from '@firebase/firestore';
 
 const App = () => {
+  
   return (
     <Router>
       <Routes>
@@ -21,13 +25,16 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/signup2" element={<Signup2 />} />
+        <Route path="/myinterest" element={<Myinterest />} />
+        <Route path="/startTrip" element={<StartTrip />} />
+        <Route path="/myTravel" element={<MyTravel />} />
       </Routes>
     </Router>
   );
 }
 export default App;
 
-// function App() {
+// function firebase() {
 //   const [test, setTest] = useState()
 //   // async - await로 데이터 fetch 대기
 //   async function getTest() {
@@ -52,4 +59,4 @@ export default App;
 //     </div>
 //   );
 // }
-// export default App;
+// export default firebase;

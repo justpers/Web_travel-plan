@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { Link} from 'react-router-dom';
-import styles from './StartTip.module.css';
+import styles from './MyTravel.module.css';
 import logoImage from '../images/airplan.png';
 import user from '../images/사용자 아이콘.png';
 
-const StartTip = () => {
+const MyTravel = () => {
   const [dropdownVisible, setDropdownBisible] = useState(false);
   const toggleDropdown = () => {
     setDropdownBisible(!dropdownVisible);
@@ -35,4 +35,4 @@ const StartTip = () => {
   );
 }
 
-export default StartTip;
+export default MyTravel;
