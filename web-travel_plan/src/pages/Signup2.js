@@ -22,7 +22,7 @@ class Signup2 extends React.Component {
         event.preventDefault();
         const { checkedPersonal, checkedTerms } = this.state;
         if (checkedPersonal && checkedTerms) {
-            alert('회원가입이 왼료되었습니다.');
+            alert('회원가입이 완료되었습니다.');
         } else {
             alert('필수 항목에 모두 동의해주세요.');
         }

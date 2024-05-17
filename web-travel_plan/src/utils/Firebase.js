@@ -9,12 +9,11 @@ const firebaseConfig = {
   projectId: process.env.REACT_APP_projectId,
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId,
-  measurementId: process.env.REACT_APP_measurementId
+  appId: process.env.REACT_APP_appId
 };
 
 const app = initializeApp(firebaseConfig);
-// firestore 객체 생성
 const db = getFirestore(app);
+const auth = getAuth(app);
 // firestore export
-export {db}
+export { db, auth };
