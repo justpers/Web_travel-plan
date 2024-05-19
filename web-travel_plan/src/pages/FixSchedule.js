@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './MyTravel.module.css';
+import styles from './Myinterest.module.css';
 import logoImage from '../images/airplan.png';
 import user from '../images/사용자 아이콘.png';
 import { signOut } from 'firebase/auth';
 import { auth } from '../utils/Firebase';
 
-const MyTravel = () => {
+const FixSchedule = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const navigate = useNavigate();
 
@@ -17,7 +17,7 @@ const MyTravel = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate('/');
+      navigate('/'); // 로그아웃 후 메인 페이지로 이동
     } catch (error) {
       console.error('로그아웃 실패:', error);
     }
@@ -36,6 +36,7 @@ const MyTravel = () => {
           {dropdownVisible && (
             <div className={styles.dropdownMenu}>
               <div className={styles.dropdownItem} onClick={handleLogout}>로그아웃</div>
+              {/* <div className={styles.dropdownItem}><Link to="/contact">문의하기</Link></div> */}
             </div>
           )}
         </div>
@@ -44,4 +45,4 @@ const MyTravel = () => {
   );
 }
 
-export default MyTravel;
+export default FixSchedule;

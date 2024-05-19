@@ -9,6 +9,7 @@ import Signup2 from './pages/Signup2'
 import Myinterest from './pages/Myinterest';
 import StartTrip from './pages/StartTrip';
 import MyTravel from './pages/MyTravel';
+import FixSchedule from './pages/FixSchedule';
 
 // // firebase.js에서 db를 import
 // import { db } from './utils/Firebase';
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/myinterest" element={<Myinterest />} />
         <Route path="/startTrip" element={<StartTrip />} />
         <Route path="/myTravel" element={<MyTravel />} />
+        <Route path="/fixSchedule" element={<FixSchedule />} />
       </Routes>
     </Router>
   );
