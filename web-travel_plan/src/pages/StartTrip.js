@@ -4,7 +4,8 @@ import styles from './StartTrip.module.css';
 import logoImage from '../images/airplan.png';
 import user from '../images/사용자 아이콘.png';
 import { signOut } from 'firebase/auth';
-import { auth } from '../utils/Firebase';
+import { auth, db } from '../utils/Firebase';
+import {collection, addDoc } from 'firebase/firestore';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -65,8 +66,20 @@ const StartTrip = () => {
     return date ? date.toLocaleDateString('ko-KR', { year: 'numeric', month: '2-digit', day: '2-digit' }) : '';
   };
 
-  const handleComplete = () => {
-    navigate('/fixSchedule');
+  const handleComplete = async () => {
+    try {
+      const user = auth.currentUser;
+      if (user) {
+        const userTripRef = collection(db, 'users', user.uid, 'trips');
+        for (const trip of trips) {
+          await addDoc(userTripRef, trip);
+        }
+        console.log('여행정보가 db에 저장됨');
+        navigate('/fixSchedule');
+      }
+    } catch (error) {
+      console.error('여행 정보 저장에 실패', error);
+    }
   };
 
   return (
