@@ -75,7 +75,7 @@ const StartTrip = () => {
           await addDoc(userTripRef, trip);
         }
         console.log('여행정보가 db에 저장됨');
-        navigate('/fixSchedule');
+        navigate('/mytravel');
       }
     } catch (error) {
       console.error('여행 정보 저장에 실패', error);

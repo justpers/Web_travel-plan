@@ -75,6 +75,10 @@ const MyTravel = () => {
     }
   };
 
+  const handleNavigate = (trip) => {
+    navigate('/fixSchedule', { state: { startDate: trip.start, endDate: trip.end, city: trip.city } });
+  };
+
   return (
     <div className={styles.main}>
       <img src={logoImage} alt="로고" className={styles.mini_logo} />
@@ -97,7 +101,7 @@ const MyTravel = () => {
         <h1 className={styles.title}>my travel record</h1>
         <div className={styles.trips}>
           {trips.map((trip, index) => (
-            <div key={index} className={styles.tripCard} onClick={() => navigate('/fixSchedule')}>
+            <div key={index} className={styles.tripCard} onClick={() => handleNavigate(trip)}>
               <img src={getImagePath(trip.city)} alt={trip.city} className={styles.tripImage} />
               <div className={styles.tripDate}>{formatDate(trip.start)} - {formatDate(trip.end)}</div>
               <div className={styles.tripCity}>{cityNameMap[trip.city].toUpperCase()}</div>
