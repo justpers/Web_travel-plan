@@ -48,7 +48,7 @@ const StartTrip = () => {
     if (cities.includes(searchTerm)) {
       setSelectedCity(searchTerm);
     } else {
-      alert('아직 등록되지 않은 도시입니다.');
+      alert('아직 등록되지 않은 여행지입니다.');
     }
   };
 
