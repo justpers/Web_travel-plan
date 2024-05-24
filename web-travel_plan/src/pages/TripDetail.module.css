@@ -1,0 +1,155 @@
+.main {
+    width: 1480px;
+    height: 900px;
+    flex-grow: 0;
+    background-color: #fff;
+  }
+  
+  .mini_logo {
+    width: 70px;
+    height: 70px;
+    mix-blend-mode: hard-light;
+    position: fixed;
+    top: 5px;
+    left: 100;
+  }
+  
+  .mini_service_name {
+    width: 91px;
+    height: 42px;
+    margin: 50px 182px 72px 67px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #365486;
+    position: fixed;
+    top: 0;
+    left: 48;
+  }
+  
+  .menubar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .menubar_a {
+    width: 135px;
+    height: 58px;
+    margin: 0 0 0 50px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #0f1035;
+  }
+  
+  .userIconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user {
+    width: 69px;
+    height: 62px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: fixed;
+    margin-left: 20px;
+  }
+  
+  .dropdownMenu {
+    position: absolute;
+    top: 70px;
+    right: -100px;
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .dropdownItem {
+    padding: 10px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f1035;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .dropdownItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 700;
+    color: #0f1035;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .inputbox {
+    width: 200px;
+    height: 42px;
+    margin: 0 25px 20px 25px;
+    text-align: center;
+    border: none;
+    color: rgba(54, 84, 134, 1.0);
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 15px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: rgba(54, 84, 134, 0.6);
+  }
+  
+  .button {
+    background-color: rgba(54, 84, 134, 0.4);
+    color: #0f1035;
+    margin-left: 30px;
+
+  }
+
+  .scheduleContent {
+    color: #0f1035;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .outputbutton {
+    background-color: rgba(54, 84, 134, 0.4);
+    color: #0f1035;
+    position: fixed;
+    bottom: 70px;
+    left: 70px;
+  }
+
+  .button2 {
+    background-color: rgba(54, 84, 134, 0.4);
+    color: #0f1035;
+    position: fixed;
+    bottom: 70px;
+    left: 200px;
+  }

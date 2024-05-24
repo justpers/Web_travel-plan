@@ -1,0 +1,161 @@
+.main {
+    width: 1480px;
+    height: 900px;
+    flex-grow: 0;
+    background-color: #fff;
+  }
+  
+  .mini_logo {
+    width: 70px;
+    height: 70px;
+    mix-blend-mode: hard-light;
+    position: fixed;
+    top: 5px;
+    left: 100;
+  }
+  
+  .mini_service_name {
+    width: 91px;
+    height: 42px;
+    margin: 50px 182px 72px 67px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
+    text-align: center;
+    color: #365486;
+    position: fixed;
+    top: 0;
+    left: 48;
+  }
+  
+  .mainContent{
+    flex: 1; /* 두 컬럼이 동일한 너비를 가지도록 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로 중앙 정렬 */
+  }
+  
+  .main_title1 {
+  width: 900px;
+  height: 120px;
+  margin: 93px 3px 0 0;
+  font-family: Inter;
+  font-size: 55px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .main_title2 {
+  width: 900px;
+  height: 149.2px;
+  margin: 40px 21px 115.8px 20px;
+  transform: rotate(-0.02deg);
+  font-family: Inter;
+  font-size: 55px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .main_title1 .text-style-1,
+  .main_title2 .text-style-1 {
+  font-size: 60px;
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* 로고 이미지 스타일 */
+  .logo {
+    width: 378px;
+    height: 326px;
+    margin: 0 0 0 182px;
+    mix-blend-mode: hard-light;
+    position: relative;
+  }
+  
+  .service_name {
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    color: #365486;
+    position: absolute;
+    left: 750px;
+  }
+  
+    .menubar {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      background-color: #fff;
+    }
+    
+    .menubar_a {
+      width: 135px;
+      height: 58px;
+      margin: 0 0 0 50px;
+      font-family: Inter;
+      font-size: 20px;
+      font-weight: 600;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #0f1035;
+    }
+  
+    .userIconContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  
+    .user {
+      width: 69px;
+      height: 62px;
+      cursor: pointer;
+      border-radius: 10px;
+      position: fixed;
+      margin-left: 20px;
+    }
+  
+    .dropdownMenu {
+      position: absolute;
+      top: 70px;
+      right: -100px;
+      width: 100px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+  
+    .dropdownItem {
+      padding: 10px;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f1035;
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    .dropdownItem:hover {
+      background-color: #f0f0f0;
+    }
+  

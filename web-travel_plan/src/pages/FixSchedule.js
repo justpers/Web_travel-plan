@@ -16,11 +16,6 @@ const FixSchedule = () => {
   const location = useLocation();
   const { startDate, endDate, city } = location.state || {};
 
-  // 로그를 통해 데이터 확인
-  console.log("Received startDate:", startDate);
-  console.log("Received endDate:", endDate);
-  console.log("Received city:", city);
-
   const validStartDate = startDate ? new Date(startDate.seconds * 1000) : new Date();
   const validEndDate = endDate ? new Date(endDate.seconds * 1000) : new Date();
 
@@ -83,6 +78,10 @@ const FixSchedule = () => {
     }
   };
 
+  const handleNavigateToTripDetail = () => {
+    navigate('/tripDetail', { state: { startDate, endDate, city, tripId: location.state.tripId } });
+  };
+
   return (
     <div className={styles.main}>
       <img src={logoImage} alt="로고" className={styles.mini_logo} />
@@ -116,7 +115,7 @@ const FixSchedule = () => {
             <button className={styles.completeButton}>
               <Link to="/fixSchedule">여행도시 / 날짜 수정</Link>
             </button>
-            <button className={styles.completeButton}>
+            <button className={styles.completeButton} onClick={handleNavigateToTripDetail}>
               <Link to="/tripDetail">세부계획 짜기</Link>
             </button>
           </div>

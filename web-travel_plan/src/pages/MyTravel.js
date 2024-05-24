@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import styles from './MyTravel.module.css';
 import logoImage from '../images/airplan.png';
 import user from '../images/사용자 아이콘.png';
@@ -10,7 +10,10 @@ import { collection, getDocs } from 'firebase/firestore';
 const MyTravel = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [trips, setTrips] = useState([]);
+  const [recommendations, setRecommendations] = useState([]);
   const navigate = useNavigate();
+  const location = useLocation();
+  const { tripIds } = location.state || {};
 
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
@@ -32,7 +35,7 @@ const MyTravel = () => {
         if (user) {
           const userTripsRef = collection(db, 'users', user.uid, 'trips');
           const snapshot = await getDocs(userTripsRef);
-          const tripsData = snapshot.docs.map(doc => doc.data());
+          const tripsData = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
           tripsData.sort((a, b) => b.start.seconds - a.start.seconds);
           setTrips(tripsData);
         }
@@ -51,7 +54,7 @@ const MyTravel = () => {
 
   const cityNameMap = {
     '아테네' : 'athens', '방콕' : 'bangkok', '바르셀로나' : 'barcelona',
-    '베이징' : 'bejing', '부다페스트' : 'budapest', '세부' : 'cebu',
+    '베이징' : 'beijing', '부다페스트' : 'budapest', '세부' : 'cebu',
     '치앙마이' : 'chiang mai','다낭' : 'da nang', '두바이' : 'dubai', 
     '피렌체' : 'florence', '후쿠오카' : 'fukuoka', '괌' : 'guam', 
     '하와이' : 'hawaii', '헬싱키' : 'helsinki', '홍콩' : 'hong kong', 
@@ -65,6 +68,34 @@ const MyTravel = () => {
     '빈' : 'vienna', '취리히' : 'zurich'
   };
 
+  const travelRecommendations = {
+    '1': ['방콕', '하와이', '세부'],
+    '2': ['싱가포르','코타키나발루'],
+    '3': ['홍콩'],
+    '4': ['파리', '로마', '상하이'],
+    '5': ['뉴욕', '오사카'],
+    '6': ['바르셀로나'],
+    '7': ['피렌체'],
+    '8': ['취리히'],
+    '9': ['멜버른', '샌프란시스코'],
+    '10': ['상하이', '시드니'],
+    '11': ['타이페이', '도쿄'],
+    '12': ['이스탄불', '치앙마이']
+  };
+
+  useEffect(() => {
+    const now = new Date();
+    const currentMonth = now.getMonth() + 1;
+    const nextThreeMonths = [
+      currentMonth,
+      (currentMonth % 12) + 1,
+      ((currentMonth + 1) % 12) + 1
+    ];
+
+    const recommendations = nextThreeMonths.flatMap(month => travelRecommendations[month.toString()] || []);
+    setRecommendations(recommendations);
+  }, []);
+
   const getImagePath = (city) => {
     const englishCity = cityNameMap[city];
     try {
@@ -76,8 +107,9 @@ const MyTravel = () => {
   };
 
   const handleNavigate = (trip) => {
-    navigate('/fixSchedule', { state: { startDate: trip.start, endDate: trip.end, city: trip.city } });
+    navigate('/fixSchedule', { state: { startDate: trip.start, endDate: trip.end, city: trip.city, tripId: trip.id } });
   };
+  
 
   return (
     <div className={styles.main}>
@@ -105,6 +137,18 @@ const MyTravel = () => {
               <img src={getImagePath(trip.city)} alt={trip.city} className={styles.tripImage} />
               <div className={styles.tripDate}>{formatDate(trip.start)} - {formatDate(trip.end)}</div>
               <div className={styles.tripCity}>{cityNameMap[trip.city].toUpperCase()}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.recommendations}>
+        <h2 className={styles.recommendationsTitle}>여행지 추천</h2>
+        <div className={styles.recommendationsList}>
+          {recommendations.map((city, index) => (
+            <div key={index} className={styles.recommendationCard}>
+              <img src={getImagePath(city)} alt={city} className={styles.recommendationImage} />
+              <div className={styles.recommendationCity}>{city}</div>
             </div>
           ))}
         </div>

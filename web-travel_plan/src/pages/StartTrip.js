@@ -72,9 +72,12 @@ const StartTrip = () => {
       if (user) {
         const userTripRef = collection(db, 'users', user.uid, 'trips');
         for (const trip of trips) {
-          await addDoc(userTripRef, trip);
+          const docRef = await addDoc(userTripRef, trip);
+          // 서브 컬렉션을 생성하고 초기화할 수 있습니다.
+          const schedulesRef = collection(docRef, 'schedules');
+          await addDoc(schedulesRef, { exampleField: 'exampleValue' });
+          console.log(`여행 ${docRef.id}에 서브 컬렉션 추가됨`);
         }
-        console.log('여행정보가 db에 저장됨');
         navigate('/mytravel');
       }
     } catch (error) {
