@@ -8,7 +8,12 @@
   3) 여행지의 다양한 결제 수단을 담을 수 있는 가계부 서비스가 없었던 점
   4) 현금을 환전했을 때의 환율로 저장이 안되는 점
 
+따라서, 위와 같은 불편하게 느꼈던 점을 해결해 더 편한 여행의 시작을 만드는 것이 목표였다.
+
 ## 개발 환경
+- HTML, CSS
+- JavaSript(React)
+- 구글 FireBase 사용 (백엔드와 DB 구현)
 
 ## 피그마 링크
 https://www.figma.com/design/y3J52opptT9ZmuwJkM9LSD/travel-plan?node-id=0-1
